@@ -4,21 +4,20 @@ export default class Api {
 
     constructor() {
         this.api = axios.create({
-            baseURL: 'http://apple.com',
+            baseURL: 'http://192.168.7.91',
             timeout: 5000,
         });
     }
 
     ping() {
-        console.log('pinging')
-        return this.api.get('/')
+        return this.api.get('/ping')
     }
 
     togglePower() {
-        return this.api.get('/toggle-power')
+        return this.api.get('/on-off')
     }
 
     toggleHeat() {
-        return this.api.get('/toggle-heat')
+        return this.api.get('/temp')
     }
 }

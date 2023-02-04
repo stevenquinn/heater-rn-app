@@ -11,7 +11,7 @@ export default App = () => {
     const [connected, setConnected] = useState(null)
     const [heat, setHeat] = useState(false)
     const api = new Api()
-    const pingInterval = 30000
+    const pingInterval = 5000
 
     const heatOffImage = require(`../resources/images/heat_off.png`)
     const heatOnImage = require(`../resources/images/heat_on.png`)
