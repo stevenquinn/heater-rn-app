@@ -1,3 +1,4 @@
+import { API_TOKEN } from '@env'
 import axios from 'axios'
 
 export default class Api {
@@ -10,14 +11,14 @@ export default class Api {
     }
 
     ping() {
-        return this.api.get('/ping')
+        return this.api.get(`/ping?token=${API_TOKEN}`)
     }
 
     togglePower() {
-        return this.api.get('/on-off')
+        return this.api.get(`/on-off?token=${API_TOKEN}`)
     }
 
     toggleHeat() {
-        return this.api.get('/temp')
+        return this.api.get(`/temp?token=${API_TOKEN}`)
     }
 }
