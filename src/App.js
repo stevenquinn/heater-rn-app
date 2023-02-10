@@ -37,16 +37,18 @@ export default App = () => {
     }
 
     const togglePower = () => {
-        setPower(!power)
+        setPower(true)
+        setTimeout(() => setPower(false), 2000)
         api.togglePower()
-            .then(() => setTimeout(() => setPower(!power), 2000))
+            .then(() => console.log('Power toggled'))
             .catch(error => console.log(error))
     }
 
     const toggleHeat = () => {
-        setHeat(!heat)
+        setHeat(true)
+        setTimeout(() => setHeat(false), 2000)
         api.toggleHeat()
-            .then(() => setTimeout(() => setHeat(!heat), 2000))
+            .then(() => console.log('Heat toggled'))
             .catch(error => console.log(error))
     }
 

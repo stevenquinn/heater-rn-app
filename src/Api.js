@@ -1,11 +1,13 @@
-import { API_TOKEN } from '@env'
 import axios from 'axios'
+
+const DEVICE_IP = '192.168.7.91'
+const API_TOKEN = 'RjXx8dtAvT2pKCF9DnR8fVtuBbo'
 
 export default class Api {
 
     constructor() {
         this.api = axios.create({
-            baseURL: 'http://192.168.7.91',
+            baseURL: `http://${DEVICE_IP}`,
             timeout: 5000,
         });
     }
