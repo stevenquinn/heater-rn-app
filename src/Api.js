@@ -1,7 +1,5 @@
 import axios from 'axios'
-
-const DEVICE_IP = '192.168.7.91'
-const API_TOKEN = 'RjXx8dtAvT2pKCF9DnR8fVtuBbo'
+import {DEVICE_IP, API_TOKEN} from "@env"
 
 export default class Api {
 
