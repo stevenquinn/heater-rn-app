@@ -1,23 +1,50 @@
-# heater-rn-app
+# Welcome to your Expo app 👋
 
-This is the code for my on-off React Native app that allows me to remotely control my wall heater in my office, combined with a Raspberry Pi Pico W running code from [https://github.com/stevenquinn/smart-heater](https://github.com/stevenquinn/smart-heater). Feel free to use this as a jumping off point for your own Iot projects.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Overview
+## Get started
 
-This app does the following:
+1. Install dependencies
 
-* When it boots, it tries to ping the heater via an HTTP request to see if it's online. If it is, it displays the controls on the screen.
-* It can send an HTTP request to use the on/off button on the heater which controls an attached servo to physically hit the button. 
-* It can send an HTTP request to use temperature button on the heater which controls an attached servo to physically hit the button.
-* There's no feedback from the heater so there's no way to know if either button was successfully hit, or if the heater is on or off.
+   ```bash
+   npm install
+   ```
 
-## Installation
+2. Start the app
 
-* Make sure your local development environment is setup for React Native development. See [https://reactnative.dev/docs/environment-setup](https://reactnative.dev/docs/environment-setup) for more information.
-* Clone this repo
-* Run `npm install` to install the dependencies
-* Copy `.env.example` to `.env` and update the `api_token` to match the token you set in the `smart-heater` code.
-* Run `npm run start` to start the development server
-* Run `npm run ios` to start the app in the IOS simulator (a Mac and Xcode required). This also supports Android via `npm run android` and building via Android Studio, but I'm not an Android user.
-* Your device will need to be on the same network the heater is on.
+   ```bash
+   npx expo start
+   ```
 
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
+
+```bash
+npm run reset-project
+```
+
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+
+## Learn more
+
+To learn more about developing your project with Expo, look at the following resources:
+
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+
+## Join the community
+
+Join our community of developers creating universal apps.
+
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
